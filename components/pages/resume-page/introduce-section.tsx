@@ -4,8 +4,8 @@ import SectionTitle from './section-title';
 export default function IntroduceSection() {
   return (
     <section className="mt-20 flex gap-10">
-      <SectionTitle className="w-[300px]">INTRODUCE</SectionTitle>
-      <p className="">
+      <SectionTitle className="w-[300px] shrink-0">INTRODUCE</SectionTitle>
+      <p>
         웹 퍼블리셔로서의 경험을 토대로 탄탄한 CSS 기술 능력과 함께 지속적인 웹 개발 공부를 통해
         스스로 발전해 나가고 있습니다.
         <br />
