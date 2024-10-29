@@ -7,12 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'var-main': '#2B7DE4',
+      },
       fontFamily: {
         pretendard: ['Pretendard', 'sans-serif'],
       },
       screens: {
-        sm: '768px', // mobile
-        md: '1024px', // tablet
+        sm: '768px',
+        md: '1024px',
       },
     },
   },
