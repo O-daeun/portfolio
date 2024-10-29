@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import BlankLink from '@/components/blank-link';
 import { ImProfile } from 'react-icons/im';
 import { IoIosCall, IoIosMail, IoLogoGithub } from 'react-icons/io';
 
@@ -33,9 +33,9 @@ export default function ProfileLinks() {
       {addressList.map((address) => (
         <li key={address.title} className="flex items-center gap-[6px]">
           {address.image}
-          <Link href={address.title === 'phone' ? `tel:${address.link}` : address.link}>
+          <BlankLink href={address.title === 'phone' ? `tel:${address.link}` : address.link}>
             {address.link}
-          </Link>
+          </BlankLink>
         </li>
       ))}
     </ul>
