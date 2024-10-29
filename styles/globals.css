@@ -13,4 +13,8 @@
   body {
     @apply font-pretendard;
   }
+
+  a {
+    @apply text-var-main hover:underline;
+  }
 }
