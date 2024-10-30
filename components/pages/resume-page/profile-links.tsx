@@ -4,7 +4,7 @@ import { IoIosCall, IoIosMail, IoLogoGithub } from 'react-icons/io';
 
 const addressStyle = 'size-5';
 
-const addressList = [
+const ADDRESS_LIST = [
   {
     title: 'mail',
     link: 'qzsz797979@gmail.com',
@@ -30,7 +30,7 @@ const addressList = [
 export default function ProfileLinks() {
   return (
     <ul className="flex flex-col gap-[6px]">
-      {addressList.map((address) => (
+      {ADDRESS_LIST.map((address) => (
         <li key={address.title} className="flex items-center gap-[6px]">
           {address.image}
           <BlankLink href={address.title === 'phone' ? `tel:${address.link}` : address.link}>

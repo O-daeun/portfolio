@@ -18,6 +18,7 @@ const SKILL_LIST = [
       'React Query',
       'Tailwind CSS',
       'Styled Components',
+      'Module CSS',
       'Axios',
       'React Hook Form',
       'Next Auth',
@@ -26,7 +27,7 @@ const SKILL_LIST = [
   },
   {
     title: 'Tools',
-    list: ['Git', 'Github', 'Notion'],
+    list: ['Git', 'Github', 'Notion', 'Figma'],
   },
 ];
 
@@ -34,9 +35,9 @@ export default function SkillSection() {
   return (
     <section className="mt-20">
       <SectionTitle className="mb-10">SKILL</SectionTitle>
-      <ul className="flex flex-col gap-8">
+      <ul className="">
         {SKILL_LIST.map((skill, index) => (
-          <li key={index} className="flex gap-14 border-b border-gray-200 pb-8 last:border-none">
+          <li key={index} className="flex gap-14 border-b border-gray-200 py-8 last:border-none">
             <h3 className="w-[300px] shrink-0 text-right text-3xl font-medium text-gray-500">
               {skill.title}
             </h3>

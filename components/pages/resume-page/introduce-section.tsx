@@ -16,8 +16,12 @@ export default function IntroduceSection() {
         <BlankLink href="https://www.kiweb.or.kr">경일게임아카데미</BlankLink>, 2022 crocs
         뮤직컨테스트 등을 구현하면서 빠르게 html, css 및 웹의 기초를 익혔습니다.
         <br />
+        그리고 그 경험을 통해 sematic tag를 더 꼼꼼히 작성하고 유지보수가 용이하게 구조를 잡고
+        스타일링을 하는 등의 소신이 생겼습니다.
         <br />
-        그리고 최신 트렌드에 맞추어 React와 Next.js, Tailwindcss 등을 새로 학습하여 개인 프로젝트로{' '}
+        <br />
+        그리고 컴포넌트 기반의 React를 접하며 반복작업을 줄이고 장기적으로 재활용가능한 컴포넌트를
+        생성하는 재미를 느꼈으며, Next.js, Tailwindcss 등을 새로 학습하였고, 개인 프로젝트로{' '}
         <BlankLink href="https://epiday.vercel.app/">에피데이</BlankLink>를 혼자 작업해보며 어느
         때에 SSR과 CSR을 적용할지와 컴포넌트는 어떻게 분리하고 관리할지 등을 익혔습니다.
         <br />
