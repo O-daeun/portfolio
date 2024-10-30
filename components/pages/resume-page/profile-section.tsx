@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { LuArrowDownWideNarrow } from 'react-icons/lu';
+import { RiAlignItemLeftFill } from 'react-icons/ri';
 import ProfileLinks from './profile-links';
 
 export default function ProfileSection() {
@@ -18,11 +18,11 @@ export default function ProfileSection() {
         </h1>
         <ProfileLinks />
         <div className="flex w-full items-center gap-2 rounded-lg bg-gray-200/80 p-4 shadow-md">
-          <LuArrowDownWideNarrow className="size-10" />
+          <RiAlignItemLeftFill className="size-10" />
           <p>
-            비전공자에서 웹 퍼블리셔로, 웹 퍼블리셔에서 웹 프론트앤드 개발자로.
+            확장성과 유지보수성을 고려한 객체 지향적인 프로그래밍과 함께
             <br />
-            계속해서 성장하기 위해 노력하고 있습니다.
+            섬세하고 깔끔한 스타일링을 지향합니다.
           </p>
         </div>
       </div>

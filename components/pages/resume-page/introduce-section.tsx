@@ -9,12 +9,12 @@ export default function IntroduceSection() {
         웹 퍼블리셔로서의 경험을 토대로 탄탄한 CSS 기술 능력과 함께 지속적인 웹 개발 공부를 통해
         스스로 발전해 나가고 있습니다.
         <br />
-        <br />웹 에이전시에서 웹 퍼블리싱을 100% 담당하여{' '}
+        <br />웹 에이전시에서 근무하며 웹 퍼블리싱을 단독으로 담당하여{' '}
         <BlankLink href="https://hyundai-isc.com">현대ISC</BlankLink>,{' '}
         <BlankLink href="https://www.gpac-kpac.com">한국폴리아세탈(주)</BlankLink> 등의 기업
         홈페이지를 구축하였고, 그 외에도 메인으로 담당하여{' '}
         <BlankLink href="https://www.kiweb.or.kr">경일게임아카데미</BlankLink>, 2022 crocs
-        뮤직컨테스트 등을 구현하면서 빠르게 html, css 및 웹의 기초를 익혔습니다.
+        뮤직컨테스트 등을 구현하면서 html, css 및 웹의 기초를 익혔습니다.
         <br />
         그리고 그 경험을 통해 sematic tag를 더 꼼꼼히 작성하고 유지보수가 용이하게 구조를 잡고
         스타일링을 하는 등의 소신이 생겼습니다.

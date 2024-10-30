@@ -34,7 +34,7 @@ const SKILL_LIST = [
 export default function SkillSection() {
   return (
     <section className="mt-20">
-      <SectionTitle className="mb-10">SKILL</SectionTitle>
+      <SectionTitle className="mb-4">SKILL</SectionTitle>
       <ul className="">
         {SKILL_LIST.map((skill, index) => (
           <li key={index} className="flex gap-14 border-b border-gray-200 py-8 last:border-none">

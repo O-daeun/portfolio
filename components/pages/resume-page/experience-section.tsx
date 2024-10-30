@@ -4,7 +4,7 @@ const EXPERIENCE_LIST = [
   {
     title: '코드잇 스프린트 FE 5기 수료',
     subTitle: '프론트엔드 부트캠프',
-    period: '2024. 02 ~ 2024. 08',
+    period: '2024. 02 - 2024. 08',
     skillList: ['React.js', 'Next.js', 'React Query', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
     contentsList: [
       '기획안과 디자인 시안을 기반으로 홈페이지를 구현',
@@ -17,7 +17,7 @@ const EXPERIENCE_LIST = [
   {
     title: '웹 에이전시 십이지(SIBIZI) 근무',
     subTitle: '웹 퍼블리셔',
-    period: '2022. 06 ~ 2023. 04',
+    period: '2022. 06 - 2023. 04',
     skillList: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
     contentsList: [
       '기획서와 디자인시안을 기반으로 기업 홈페이지 퍼블리싱',
@@ -29,7 +29,7 @@ const EXPERIENCE_LIST = [
   {
     title: '스마트기기 UI/UX 디자인 훈련 수료',
     subTitle: '디지털앱·웹 디자인, 웹 퍼블리셔',
-    period: '2021. 12 ~ 2022. 05',
+    period: '2021. 12 - 2022. 05',
     skillList: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'PhotoShop'],
     contentsList: [
       '직접 디자인하여 그 시안대로 홈페이지 리뉴얼 퍼블리싱 진행',
@@ -42,7 +42,7 @@ const EXPERIENCE_LIST = [
 export default function ExperienceSection() {
   return (
     <section className="mt-20">
-      <SectionTitle className="mb-10">EXPERIENCE</SectionTitle>
+      <SectionTitle className="mb-4">EXPERIENCE</SectionTitle>
       <ul>
         {EXPERIENCE_LIST.map((experience, index) => (
           <li key={index} className="flex gap-10 border-b border-gray-200 py-8 last:border-none">
@@ -52,11 +52,10 @@ export default function ExperienceSection() {
             <div className="w-full">
               <h3 className="mb-3 text-3xl font-medium">{experience.title}</h3>
               <span className="font-light italic text-gray-500">{experience.subTitle}</span>
-
               <ul className="mt-6 flex flex-col gap-2">
                 <li className="ml-6 list-disc">
                   <span>Skill</span>
-                  <ul className="mt-2 flex gap-1">
+                  <ul className="mt-1 flex gap-1">
                     {experience.skillList.map((skill, index) => (
                       <li
                         key={index}
