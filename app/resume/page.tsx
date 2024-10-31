@@ -1,3 +1,4 @@
+import EducationSection from '@/components/pages/resume-page/education-section';
 import ExperienceSection from '@/components/pages/resume-page/experience-section';
 import InnerLayout from '@/components/pages/resume-page/inner-layout';
 import IntroduceSection from '@/components/pages/resume-page/introduce-section';
@@ -13,6 +14,7 @@ export default function ResumePage() {
       <SkillSection />
       <ExperienceSection />
       <ProjectSection />
+      <EducationSection />
     </InnerLayout>
   );
 }
