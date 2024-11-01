@@ -3,7 +3,7 @@ import SectionTitle from './section-title';
 const SKILL_LIST = [
   {
     title: 'Languages',
-    list: ['JavaScript', 'TypeScript', 'HTML', 'CSS'],
+    list: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
   },
   {
     title: (
@@ -43,7 +43,7 @@ export default function SkillSection() {
             </h3>
             <ul className="flex w-full flex-wrap gap-y-4">
               {skill.list.map((item, index) => (
-                <li key={index} className="w-1/2 list-disc text-lg">
+                <li key={index} className="w-1/2 list-disc font-light">
                   {item}
                 </li>
               ))}

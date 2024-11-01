@@ -5,7 +5,7 @@ const EDUCATION_LIST = [
     title: '동국대학교 WISE캠퍼스',
     subTitle: '사회복지학과 조기졸업',
     period: '2017. 03 - 2020. 02',
-    contentsList: ['학점 평균 4.29/4.5로 최우등졸업상 수상'],
+    contentsList: ['학점 평균 4.29/4.5', '최우등 졸업상 수상'],
   },
   {
     title: '양서고등학교',
@@ -29,7 +29,7 @@ export default function EducationSection() {
               <span className="font-light italic text-gray-500">{education.subTitle}</span>
               <ul className="mt-6 flex flex-col gap-2">
                 {education.contentsList?.map((content, index) => (
-                  <li key={index} className="ml-6 list-disc">
+                  <li key={index} className="ml-6 list-disc font-light">
                     {content}
                   </li>
                 ))}

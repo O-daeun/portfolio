@@ -7,11 +7,11 @@ const EXPERIENCE_LIST = [
     period: '2024. 02 - 2024. 08',
     skillList: ['React.js', 'Next.js', 'React Query', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
     contentsList: [
-      '기획안과 디자인 시안을 기반으로 홈페이지를 구현',
-      '3번의 팀 프로젝트에서 2번의 팀장과 1번의 팀원 역할을 하며 리더십과 팔로워십을 익힘',
-      'Tailwind CSS, Styled Components 등의 다양한 CSS 라이브러리를 사용하여 프로젝트를 진행',
-      'React.js만을 사용한 프로젝트와 Next.js를 사용한 프로젝트를 진행',
-      '3번의 팀 프로젝트의 발표를 맡으며 발표 기술을 익힘',
+      '기획안과 디자인 시안을 기반으로 React와 Next.js를 사용해 홈페이지를 구현',
+      '3번의 팀 프로젝트에 참여하며 2번의 팀장과 1번의 팀원 역할 수행, 리더십과 협업 능력을 길렀음',
+      'Tailwind CSS, Styled Components 등의 CSS 라이브러리를 사용해 UI 일관성과 유지보수성 강화',
+      'React와 Next.js의 차이를 이해하며 프로젝트 요구사항에 맞는 프레임워크 선택 및 적용',
+      '발표 경험을 통해 효과적인 의사소통 및 발표 기술 향상',
     ],
   },
   {
@@ -20,21 +20,21 @@ const EXPERIENCE_LIST = [
     period: '2022. 06 - 2023. 04',
     skillList: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
     contentsList: [
-      '기획서와 디자인시안을 기반으로 기업 홈페이지 퍼블리싱',
-      '카페24를 기반으로 한 빌리프, CNP 등 유지보수',
-      '국정원 홈페이지, 평창올림픽 홈페이지 등 유지보수',
-      '기획자, 디자이너, 개발자와 소통하며 프로젝트 진행하며 협력방식을 익힘',
+      '기획서와 디자인시안을 기반으로 현대ISC, 경일게임아카데미 등의 웹사이트 퍼블리싱 작업 전담',
+      '카페24 기반의 빌리프, CNP 등 다양한 웹사이트 유지보수 담당',
+      '국정원, 평창올림픽 등의 웹사이트를 유지보수하며 문제 해결 및 최적화 경험 축적',
+      '기획자, 디자이너, 개발자와의 소통을 통해 프로젝트를 효율적으로 조율하며 협업 방식 습득',
     ],
   },
   {
     title: '스마트기기 UI/UX 디자인 훈련 수료',
-    subTitle: '디지털앱·웹 디자인, 웹 퍼블리셔',
+    subTitle: '디지털앱·웹 디자인, 웹 퍼블리셔 과정',
     period: '2021. 12 - 2022. 05',
     skillList: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'PhotoShop'],
     contentsList: [
-      '직접 디자인하여 그 시안대로 홈페이지 리뉴얼 퍼블리싱 진행',
-      'HTML과 CSS를 사용한 정적 퍼블리싱과 JQuery를 사용한 동적 퍼블리싱을 익힘',
-      '포토샵, 일러스트레이터를 사용한 디자인을 익힘',
+      '직접 디자인한 시안을 기반으로 HTML과 CSS를 활용한 정적 퍼블리싱 및 JQuery를 활용한 동적 퍼블리싱 수행',
+      'Photoshop, Illustrator 등 디자인 툴을 사용하여 UI/UX 디자인의 기본 이해와 구현 능력 강화',
+      '기획 단계부터 퍼블리싱까지 전반적인 웹사이트 리뉴얼을 주도하며 웹 디자인과 프론트엔드의 연결고리 이해',
     ],
   },
 ];
@@ -54,7 +54,7 @@ export default function ExperienceSection() {
               <span className="font-light italic text-gray-500">{experience.subTitle}</span>
               <ul className="mt-6 flex flex-col gap-2">
                 <li className="ml-6 list-disc">
-                  <span>Skill</span>
+                  <span>Skill Keywords</span>
                   <ul className="mt-1 flex gap-1">
                     {experience.skillList.map((skill, index) => (
                       <li
@@ -67,7 +67,7 @@ export default function ExperienceSection() {
                   </ul>
                 </li>
                 {experience.contentsList.map((content, index) => (
-                  <li key={index} className="ml-6 list-disc">
+                  <li key={index} className="ml-6 list-disc font-light">
                     {content}
                   </li>
                 ))}

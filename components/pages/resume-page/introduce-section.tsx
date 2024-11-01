@@ -5,28 +5,29 @@ export default function IntroduceSection() {
   return (
     <section className="mt-20 flex gap-10">
       <SectionTitle className="w-[300px] shrink-0">INTRODUCE</SectionTitle>
-      <p>
-        웹 퍼블리셔로서의 경험을 토대로 탄탄한 CSS 기술 능력과 함께 지속적인 웹 개발 공부를 통해
-        스스로 발전해 나가고 있습니다.
+      <p className="font-light leading-[1.75]">
+        웹 퍼블리셔로서 쌓아온 CSS와 HTML의 탄탄한 기본기, 웹 표준에 대한 깊은 이해를 바탕으로
+        프론트엔드 역량을 키워나가고 있습니다.
         <br />
-        <br />웹 에이전시에서 근무하며 웹 퍼블리싱을 단독으로 담당하여{' '}
-        <BlankLink href="https://hyundai-isc.com">현대ISC</BlankLink>,{' '}
-        <BlankLink href="https://www.gpac-kpac.com">한국폴리아세탈(주)</BlankLink> 등의 기업
-        홈페이지를 구축하였고, 그 외에도 메인으로 담당하여{' '}
-        <BlankLink href="https://www.kiweb.or.kr">경일게임아카데미</BlankLink>, 2022 crocs
-        뮤직컨테스트 등을 구현하면서 html, css 및 웹의 기초를 익혔습니다.
-        <br />
-        그리고 그 경험을 통해 sematic tag를 더 꼼꼼히 작성하고 유지보수가 용이하게 구조를 잡고
-        스타일링을 하는 등의 소신이 생겼습니다.
+        <br />웹 에이전시 근무 중 <BlankLink href="https://hyundai-isc.com">
+          현대ISC
+        </BlankLink>, <BlankLink href="https://www.kiweb.or.kr">경일게임아카데미</BlankLink> 등의
+        웹사이트 퍼블리싱 작업을 전담하며, 기획안과 디자인 시안을 반영한 반응형 웹 구현과 세밀한
+        스타일링에 집중했습니다. 이 과정에서 기획자, 디자이너, 개발자와 지속적으로 소통하며
+        웹사이트의 완성도를 높였으며, 검색엔진 최적화(SEO)를 위해 sementic 태그를 활용하고
+        유지보수가 용이한 구조를 위해 노력했습니다.
         <br />
         <br />
-        그리고 컴포넌트 기반의 React를 접하며 반복작업을 줄이고 장기적으로 재활용가능한 컴포넌트를
-        생성하는 재미를 느꼈으며, Next.js, Tailwindcss 등을 새로 학습하였고, 개인 프로젝트로{' '}
-        <BlankLink href="https://epiday.vercel.app/">에피데이</BlankLink>를 혼자 작업해보며 어느
-        때에 SSR과 CSR을 적용할지와 컴포넌트는 어떻게 분리하고 관리할지 등을 익혔습니다.
+        React와 같은 컴포넌트 기반 프레임워크를 통해 코드의 재사용성을 극대화하는 설계에 흥미를
+        느끼며 Next.js와 React Query, TailwindCSS 등을 학습하며 프로젝트에 적용해 왔습니다. 특히
+        개인 프로젝트인 <BlankLink href="https://epiday.vercel.app/">에피데이</BlankLink>
+        에서는 SSR과 CSR의 장단점을 이해하며 적절한 적용 방식을 익히고 컴포넌트 관리 및 분리 방법을
+        실습했으며, 지속적으로 코드 개선을 위해 노력하고 있습니다.
         <br />
-        <br />그 외에도 스프린트 FE과정을 수료하며 세 번의 팀프로젝트에서 두 번의 팀장과 한 번의
-        팀원을 경험해보며 어떻게 커뮤니케이션을 해야하는지도 익혔습니다.
+        <br />
+        또한, 세 번의 팀 프로젝트에서 두 차례 팀장을 맡으며 리더십을 발휘하고, 팀원으로도 참여하며
+        효과적인 커뮤니케이션과 협업을 경험했습니다. 이를 통해 프로젝트 목표 달성을 위한 최적의
+        방안을 모색하고 조율하는 능력을 기르게 되었습니다.
       </p>
     </section>
   );
