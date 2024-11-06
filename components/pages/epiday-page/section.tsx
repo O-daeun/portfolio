@@ -1,0 +1,17 @@
+import InnerLayout from '@/components/inner-layout';
+
+interface Props {
+  title: string;
+  children: React.ReactNode;
+}
+
+export default function Section({ title, children }: Props) {
+  return (
+    <section>
+      <InnerLayout className="flex flex-col gap-2">
+        <h2 className="text-var-epiday-black w-[160px] shrink-0 text-3xl font-semibold">{title}</h2>
+        <div>{children}</div>
+      </InnerLayout>
+    </section>
+  );
+}

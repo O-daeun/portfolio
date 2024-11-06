@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'var-main': '#2B7DE4',
+        'var-epiday-black': '#2B2B2B',
       },
       fontFamily: {
         pretendard: ['Pretendard', 'sans-serif'],

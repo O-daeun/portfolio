@@ -1,9 +1,14 @@
+import Header from '@/components/header';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Oh Daeun',
-  description: '오다은의 이력서',
+  description: '오다은의 포트폴리오',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
