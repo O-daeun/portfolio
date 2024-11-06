@@ -1,5 +1,7 @@
 import BlankLink from '@/components/blank-link';
+import Link from 'next/link';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { RiProfileLine } from 'react-icons/ri';
 import SectionTitle from './section-title';
 
 const PROJECT_LIST = [
@@ -10,6 +12,7 @@ const PROJECT_LIST = [
     contributionRate: 100,
     url: 'https://epiday.vercel.app/',
     github: 'https://github.com/O-daeun/epiday',
+    portfolio: '/epiday',
     skillList: ['React.js', 'Next.js', 'React Query', 'Tailwind CSS'],
     contentsList: [
       '백엔드 API와 디자인 시안을 기반으로 글귀 공유 플랫폼 프론트엔드 전담 개발',
@@ -62,6 +65,11 @@ export default function ProjectSection() {
                     <BlankLink href={project.github}>
                       <FaGithub className="size-[18px]" />
                     </BlankLink>
+                  )}
+                  {project.portfolio && (
+                    <Link href={project.portfolio}>
+                      <RiProfileLine className="size-[19px]" />
+                    </Link>
                   )}
                 </div>
               </div>

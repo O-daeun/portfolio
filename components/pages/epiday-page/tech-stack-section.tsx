@@ -8,7 +8,7 @@ function Ul({ children }: { children: React.ReactNode }) {
 function Li({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <li className="ml-4 list-disc text-xl">
-      <h4 className="font-medium">{title}</h4>
+      <h4 className="text-var-epiday-black font-medium">{title}</h4>
       <p className="mt-1 text-lg">{children}</p>
     </li>
   );
@@ -25,7 +25,7 @@ export default function TechStackSection() {
       <Article title="Styling">
         <Ul>
           <Li title="Tailwind CSS">
-            유틸리티 기반의 CSS 프레임워크로 빠르고 효율적인 스타일링 제공
+            유틸리티 기반의 CSS 프레임워크로 빠르고 효율적인 스타일링 구현
           </Li>
           <Li title="Heroicons">Next.js 페이지에 아이콘 추가</Li>
         </Ul>

@@ -7,13 +7,13 @@ import Image from 'next/image';
 
 export default function EpidayPage() {
   return (
-    <InnerLayout className="flex flex-col gap-20">
+    <InnerLayout className="mt-20 flex flex-col gap-20">
       <Image
         src="/epiday/logo.svg"
         width={250}
         height={79}
         alt="epiday"
-        className="mx-auto mb-8 mt-16"
+        className="mx-auto mb-4 mt-16"
       />
       <OverviewSection />
       <MethodSection />

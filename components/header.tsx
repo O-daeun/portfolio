@@ -1,16 +1,32 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import InnerLayout from './inner-layout';
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  return (
+    <Link
+      href={href}
+      className={`font-light duration-100 hover:font-medium hover:no-underline ${pathname === href ? 'font-medium' : ''}`}
+    >
+      {children}
+    </Link>
+  );
+}
 
 export default function Header() {
   return (
-    <header className="sticky left-0 top-0 z-50 h-20 w-full min-w-fit border-b border-gray-100 bg-white">
+    <header className="fixed left-0 top-0 z-50 h-20 w-full min-w-fit border-b border-gray-100 bg-white">
       <InnerLayout className="flex h-full items-center gap-8">
         <Link href="/" className="text-3xl font-semibold hover:no-underline">
           오다은
         </Link>
         <nav className="flex gap-4">
-          <Link href="/resume">이력서</Link>
-          <Link href="/epiday">포트폴리오</Link>
+          <NavLink href="/resume">이력서</NavLink>
+          <NavLink href="/epiday">포트폴리오</NavLink>
         </nav>
       </InnerLayout>
     </header>

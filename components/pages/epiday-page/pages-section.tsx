@@ -1,3 +1,3 @@
 export default function PagesSection() {
-  return <div>pages-section</div>;
+  return <div></div>;
 }

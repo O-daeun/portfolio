@@ -22,7 +22,7 @@ const ADDRESS_LIST = [
   },
   {
     title: 'resume',
-    link: 'https://ohdaeun.vercel.app/resume',
+    link: 'https://ohdaeun.vercel.app',
     image: <ImProfile className={addressStyle} />,
   },
 ];
