@@ -1,3 +1,4 @@
+import InnerLayout from '@/components/inner-layout';
 import MethodSection from '@/components/pages/epiday-page/method-section';
 import OverviewSection from '@/components/pages/epiday-page/overview-section';
 import PagesSection from '@/components/pages/epiday-page/pages-section';
@@ -6,7 +7,7 @@ import Image from 'next/image';
 
 export default function EpidayPage() {
   return (
-    <div className="flex flex-col gap-20">
+    <InnerLayout className="flex flex-col gap-20">
       <Image
         src="/epiday/logo.svg"
         width={250}
@@ -18,6 +19,6 @@ export default function EpidayPage() {
       <MethodSection />
       <TechStackSection />
       <PagesSection />
-    </div>
+    </InnerLayout>
   );
 }

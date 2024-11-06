@@ -25,8 +25,8 @@ export default function MethodSection() {
   return (
     <Section title="개발 방식">
       <p className="mt-3 text-xl leading-relaxed">
-        코드잇에서 제공받은 기획안, 디자인 시안, 백엔드 서버 스웨거 문서를 기반으로 프론트엔드 개발
-        진행 <br />
+        코드잇(주)에서 제공받은 기획안, 디자인 시안, 백엔드 서버 스웨거 문서를 기반으로 프론트엔드
+        개발 진행 <br />
         (프론트엔드 개발 기여도 100%)
       </p>
       <ul className="mt-8 flex gap-2">
