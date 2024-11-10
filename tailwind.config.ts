@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        'real-screen': 'calc(var(--vh) * 100)',
+      },
       colors: {
         'var-main': '#2B7DE4',
         'var-epiday-black': '#2B2B2B',
