@@ -4,5 +4,7 @@ interface Props {
 }
 
 export default function SubTitle({ children, className }: Props) {
-  return <h3 className={`text-2xl font-medium text-gray-500 ${className}`}>{children}</h3>;
+  return (
+    <h3 className={`text-xl font-medium text-gray-500 sm:text-2xl ${className}`}>{children}</h3>
+  );
 }

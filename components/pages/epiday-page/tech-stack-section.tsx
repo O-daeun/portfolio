@@ -7,9 +7,9 @@ function Ul({ children }: { children: React.ReactNode }) {
 
 function Li({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <li className="ml-4 list-disc text-xl">
+    <li className="ml-4 list-disc text-lg sm:text-xl">
       <h4 className="text-var-epiday-black font-medium">{title}</h4>
-      <p className="mt-1 text-lg">{children}</p>
+      <p className="mt-1 text-base sm:text-lg">{children}</p>
     </li>
   );
 }
