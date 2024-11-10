@@ -32,7 +32,7 @@ export default function ProfileLinks() {
   return (
     <ul className="flex flex-col gap-[6px]">
       {ADDRESS_LIST.map((address) => (
-        <li key={address.title} className="flex items-center gap-[6px]">
+        <li key={address.title} className="flex items-center gap-[6px] text-sm sm:text-base">
           {address.image}
           {address.title === 'mail' || address.title === 'phone' ? (
             <Link

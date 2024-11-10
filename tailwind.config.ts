@@ -15,6 +15,7 @@ module.exports = {
         pretendard: ['Pretendard', 'sans-serif'],
       },
       screens: {
+        ss: '550px',
         sm: '768px',
         md: '1024px',
       },

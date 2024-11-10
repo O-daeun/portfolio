@@ -53,20 +53,23 @@ const EXPERIENCE_LIST = [
 export default function ExperienceSection() {
   return (
     <section className="mt-20">
-      <SectionTitle className="mb-4">EXPERIENCE</SectionTitle>
+      <SectionTitle className="sm:mb-4">EXPERIENCE</SectionTitle>
       <ul>
         {EXPERIENCE_LIST.map((experience, index) => (
-          <li key={index} className="flex gap-10 border-b border-gray-200 py-8 last:border-none">
-            <span className="w-[300px] shrink-0 text-right text-3xl font-medium text-gray-500">
+          <li
+            key={index}
+            className="flex flex-col gap-4 border-b border-gray-200 py-8 last:border-none sm:flex-row sm:gap-10"
+          >
+            <span className="shrink-0 text-2xl font-medium text-gray-500 sm:w-[300px] sm:text-right sm:text-3xl">
               {experience.period}
             </span>
             <div className="w-full">
-              <h3 className="mb-3 text-3xl font-medium">{experience.title}</h3>
+              <h3 className="mb-3 text-2xl font-medium sm:text-3xl">{experience.title}</h3>
               <span className="font-light italic text-gray-500">{experience.subTitle}</span>
               <ul className="mt-6 flex flex-col gap-2">
                 <li className="ml-6 list-disc">
                   <span>Skill Keywords</span>
-                  <ul className="mt-1 flex gap-1">
+                  <ul className="mt-1 flex flex-wrap gap-1">
                     {experience.skillList.map((skill, index) => (
                       <li
                         key={index}

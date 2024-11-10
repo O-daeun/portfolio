@@ -3,7 +3,7 @@ import SectionTitle from './section-title';
 
 export default function IntroduceSection() {
   return (
-    <section className="mt-20 flex gap-10">
+    <section className="mt-16 flex flex-col gap-6 sm:mt-20 sm:flex-row sm:gap-10">
       <SectionTitle className="w-[300px] shrink-0">INTRODUCE</SectionTitle>
       <p className="font-light leading-[1.75]">
         웹 퍼블리셔로서 쌓아온 CSS와 HTML의 탄탄한 기본기, 웹 표준에 대한 깊은 이해를 바탕으로

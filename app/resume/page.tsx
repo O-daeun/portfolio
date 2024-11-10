@@ -9,7 +9,7 @@ import SkillSection from '@/components/pages/resume-page/skill-section';
 export default function ResumePage() {
   return (
     <>
-      <InnerLayout className="mt-20 py-10">
+      <InnerLayout className="mt-20 sm:mt-32">
         <ProfileSection />
         <IntroduceSection />
         <SkillSection />

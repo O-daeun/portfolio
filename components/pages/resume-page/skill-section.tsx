@@ -8,7 +8,7 @@ const SKILL_LIST = [
   {
     title: (
       <>
-        Frameworks & <br />
+        Frameworks & <br className="hidden sm:block" />
         Libraries
       </>
     ),
@@ -34,14 +34,17 @@ const SKILL_LIST = [
 export default function SkillSection() {
   return (
     <section className="mt-20">
-      <SectionTitle className="mb-4">SKILL</SectionTitle>
-      <ul className="">
+      <SectionTitle className="sm:mb-4">SKILL</SectionTitle>
+      <ul>
         {SKILL_LIST.map((skill, index) => (
-          <li key={index} className="flex gap-14 border-b border-gray-200 py-8 last:border-none">
-            <h3 className="w-[300px] shrink-0 text-right text-3xl font-medium text-gray-500">
+          <li
+            key={index}
+            className="flex flex-col gap-6 border-b border-gray-200 py-8 last:border-none sm:flex-row sm:gap-14"
+          >
+            <h3 className="shrink-0 text-2xl font-medium text-gray-500 sm:w-[300px] sm:text-right sm:text-3xl">
               {skill.title}
             </h3>
-            <ul className="flex w-full flex-wrap gap-y-4">
+            <ul className="flex w-full flex-wrap gap-y-2 pl-4 sm:gap-y-4 sm:pl-0">
               {skill.list.map((item, index) => (
                 <li key={index} className="w-1/2 list-disc font-light">
                   {item}

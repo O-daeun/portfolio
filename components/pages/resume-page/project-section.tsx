@@ -44,19 +44,24 @@ const PROJECT_LIST = [
 export default function ProjectSection() {
   return (
     <section className="mt-20">
-      <SectionTitle className="mb-4">PROJECT</SectionTitle>
+      <SectionTitle className="sm:mb-4">PROJECT</SectionTitle>
       <ul>
         {PROJECT_LIST.map((project, index) => (
-          <li key={index} className="flex gap-10 border-b border-gray-200 py-8 last:border-none">
-            <div className="flex w-[300px] shrink-0 flex-col items-end gap-[14px]">
-              <span className="text-3xl font-medium text-gray-500">{project.period}</span>
+          <li
+            key={index}
+            className="flex flex-col gap-4 border-b border-gray-200 py-8 last:border-none sm:flex-row sm:gap-10"
+          >
+            <div className="flex shrink-0 items-center gap-[14px] sm:w-[300px] sm:flex-col sm:items-end">
+              <span className="text-2xl font-medium text-gray-500 sm:text-3xl">
+                {project.period}
+              </span>
               <div className="w-fit rounded-sm bg-orange-500 px-1 text-sm font-light text-white">
                 기여도 <span className="font-medium">{project.contributionRate}%</span>
               </div>
             </div>
             <div className="w-full">
               <div className="mb-3 flex items-center gap-5">
-                <h3 className="text-3xl font-medium">{project.title}</h3>
+                <h3 className="text-2xl font-medium sm:text-3xl">{project.title}</h3>
                 <div className="flex items-center gap-2">
                   <BlankLink href={project.url}>
                     <FaExternalLinkAlt className="size-4" />

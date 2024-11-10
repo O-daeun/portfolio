@@ -17,15 +17,18 @@ const EDUCATION_LIST = [
 export default function EducationSection() {
   return (
     <section className="mt-20">
-      <SectionTitle className="mb-4">EDUCATION</SectionTitle>
+      <SectionTitle className="sm:mb-4">EDUCATION</SectionTitle>
       <ul>
         {EDUCATION_LIST.map((education, index) => (
-          <li key={index} className="flex gap-10 border-b border-gray-200 py-8 last:border-none">
-            <span className="w-[300px] shrink-0 text-right text-3xl font-medium text-gray-500">
+          <li
+            key={index}
+            className="flex flex-col gap-4 border-b border-gray-200 py-8 last:border-none sm:flex-row sm:gap-10"
+          >
+            <span className="shrink-0 text-2xl font-medium text-gray-500 sm:w-[300px] sm:text-right sm:text-3xl">
               {education.period}
             </span>
             <div className="w-full">
-              <h3 className="mb-3 text-3xl font-medium">{education.title}</h3>
+              <h3 className="mb-3 text-2xl font-medium sm:text-3xl">{education.title}</h3>
               <span className="font-light italic text-gray-500">{education.subTitle}</span>
               <ul className="mt-6 flex flex-col gap-2">
                 {education.contentsList?.map((content, index) => (
