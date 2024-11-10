@@ -8,8 +8,8 @@ export default function ProfileSection() {
       <div className="w-full sm:w-[300px] sm:min-w-[250px] sm:shrink-0">
         <Image
           src="/profile.jpg"
-          width={300}
-          height={400}
+          width={500}
+          height={665}
           alt="오다은 프로필사진"
           className="w-full rounded-sm shadow-sm"
         />
