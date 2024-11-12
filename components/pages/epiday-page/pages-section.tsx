@@ -53,7 +53,7 @@ function PageImageBox({ children, height }: { children: React.ReactNode; height:
   return (
     <div className="relative flex shrink-0 flex-col">
       <div
-        className={`relative max-h-[250px] overflow-hidden rounded-lg shadow-custom transition-[max-height] duration-1000 ss:max-h-[300px] ${isOpen ? 'max-h-full' : height}`}
+        className={`relative overflow-hidden rounded-lg shadow-custom transition-[max-height] duration-1000 ${isOpen ? 'max-h-full' : `max-h-[250px] ss:max-h-[300px] ${height}`}`}
       >
         {children}
         {!isOpen && (
