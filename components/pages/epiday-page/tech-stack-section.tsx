@@ -38,12 +38,6 @@ export default function TechStackSection() {
           <Li title="Zustand">전역 상태 관리 (모달과 토스트)</Li>
         </Ul>
       </Article>
-      <Article title="State Management">
-        <Ul>
-          <Li title="React Query">API 데이터 호출 및 캐싱, 상태 관리</Li>
-          <Li title="Zustand">전역 상태 관리 (모달과 토스트)</Li>
-        </Ul>
-      </Article>
       <Article title="Functional Components">
         <Ul>
           <Li title="react-calendar">달력 컴포넌트</Li>
