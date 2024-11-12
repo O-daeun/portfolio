@@ -2,6 +2,7 @@
 
 import BlankLink from '@/components/blank-link';
 import CodeBox from '@/components/code-box';
+import CodeWord from '@/components/code-word';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -16,14 +17,6 @@ const landingCode = `export default async function EpidaysSection() {
   // ...
 }`;
 
-function Article({ children }: { children: React.ReactNode }) {
-  return (
-    <article className="flex max-h-fit flex-col gap-4 transition-all duration-1000">
-      {children}
-    </article>
-  );
-}
-
 function PageTitle({ children, link }: { children: React.ReactNode; link: string }) {
   return (
     <SubTitle className="flex items-center gap-3">
@@ -36,32 +29,32 @@ function PageTitle({ children, link }: { children: React.ReactNode; link: string
 }
 
 function ContentsBox({ children }: { children: React.ReactNode }) {
-  return <div className="flex flex-col gap-6 sm:flex-row sm:justify-between">{children}</div>;
+  return (
+    <section className="flex flex-col gap-6 border-b border-gray-200 pb-8 pt-6 last-of-type:border-none sm:flex-row sm:justify-between">
+      {children}
+    </section>
+  );
+}
+
+function TextBox({ children }: { children: React.ReactNode }) {
+  return <div className="flex flex-col gap-4">{children}</div>;
 }
 
 function Ul({ children }: { children: React.ReactNode }) {
-  return <ul className="flex flex-col gap-2">{children}</ul>;
+  return <ul className="flex min-w-0 flex-col gap-2">{children}</ul>;
 }
 
 function Li({ children }: { children: React.ReactNode }) {
   return <li className="ml-4 list-disc font-light">{children}</li>;
 }
 
-function CodeWord({ children }: { children: string }) {
-  return (
-    <span className="mr-[1px] rounded-[3px] bg-gray-500 px-[3px] py-[1px] text-sm text-white">
-      {children}
-    </span>
-  );
-}
-
-function PageImageBox({ children, height }: { children: React.ReactNode; height: string }) {
+function PageImageBox({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative flex shrink-0 flex-col">
       <div
-        className={`relative overflow-hidden rounded-lg shadow-custom transition-[max-height] duration-1000 ${isOpen ? 'max-h-full' : `max-h-[250px] ss:max-h-[300px] ${height}`}`}
+        className={`relative overflow-hidden rounded-lg shadow-custom transition-[max-height] duration-1000 ${isOpen ? 'max-h-full' : 'max-h-[250px] ss:max-h-[300px] sm:max-h-[220px]'}`}
       >
         {children}
         {!isOpen && (
@@ -95,26 +88,24 @@ function PageImage({ name }: { name: string }) {
 export default function PagesSection() {
   return (
     <Section title="페이지 소개">
-      <div className="mt-8 flex flex-col gap-16">
-        <Article>
-          <PageTitle link="/">랜딩 페이지</PageTitle>
-          <ContentsBox>
+      <div className="flex flex-col">
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/">랜딩 페이지</PageTitle>
             <Ul>
               <Li>SEO 최적화를 위해 서버 사이드 렌더링(SSR) 구현</Li>
-              <Li>
-                최신 에피데이 데이터를 서버에서 미리 API로 불러옴
-                <CodeBox>{landingCode}</CodeBox>
-              </Li>
+              <Li>최신 에피데이 데이터를 서버에서 미리 API로 불러옴</Li>
+              <CodeBox>{landingCode}</CodeBox>
               <Li>상단 프로필 버튼과 &apos;시작하기&apos; 버튼 클릭 시 로그인 페이지로 이동</Li>
             </Ul>
-            <PageImageBox height="sm:max-h-[280px]">
-              <PageImage name="landing" />
-            </PageImageBox>
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/login">로그인/회원가입 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImageBox>
+            <PageImage name="landing" />
+          </PageImageBox>
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/login">로그인/회원가입 페이지</PageTitle>
             <Ul>
               <Li>
                 React Hook Form의 <CodeWord>useForm</CodeWord>으로 폼 상태 및 에러 메시지 관리
@@ -131,43 +122,38 @@ export default function PagesSection() {
                 </div>
               </Li>
             </Ul>
-            <div className="flex shrink-0 flex-col gap-4">
-              <PageImage name="login" />
-              <PageImage name="signup" />
-            </div>
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/">메인 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImage name="login" />
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/">메인 페이지</PageTitle>
             <Ul>
               <Li>오늘의 에피데이가 있을 경우 표시, 없으면 미표시</Li>
               <Li>오늘의 감정 선택 기능</Li>
-              <Li>
-                최신 에피데이와 댓글이 보여지며, &apos;더보기&apos; 클릭 시 3개씩 추가 로드,
-                새로고침 버튼으로 최신 상태 동기화
-              </Li>
+              <Li>최신 에피데이와 댓글이 보여지며, &apos;더보기&apos; 클릭 시 3개씩 추가 로드</Li>
+              <Li>새로고침 버튼으로 최신 상태 동기화</Li>
             </Ul>
-            <PageImageBox height="sm:max-h-[200px]">
-              <PageImage name="epidays" />
-            </PageImageBox>
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/feed">피드 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImageBox>
+            <PageImage name="epidays" />
+          </PageImageBox>
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/feed">피드 페이지</PageTitle>
             <Ul>
               <Li>최신순 에피데이 나열, &apos;더보기&apos; 클릭 시 8개씩 추가 로드</Li>
               <Li>새로고침 버튼으로 최신 상태 동기화</Li>
             </Ul>
-            <PageImageBox height="sm:max-h-[200px]">
-              <PageImage name="feed" />
-            </PageImageBox>
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/search">검색 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImageBox>
+            <PageImage name="feed" />
+          </PageImageBox>
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/search">검색 페이지</PageTitle>
             <Ul>
               <Li>키워드 검색 시 해당 단어가 포함된 에피데이 리스트 표시</Li>
               <Li>
@@ -176,25 +162,25 @@ export default function PagesSection() {
               </Li>
               <Li>에피데이 리스트는 8개씩 무한 스크롤로 표시</Li>
             </Ul>
-            <PageImage name="search" />
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/epidays/833">에피데이 상세 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImage name="search" />
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/epidays/833">에피데이 상세 페이지</PageTitle>
             <Ul>
               <Li>본인 작성 글에는 수정/삭제 가능한 케밥 메뉴 표시</Li>
               <Li>좋아요 기능 및 URL 복사 기능 제공</Li>
               <Li>댓글은 7개씩 무한 스크롤로 표시</Li>
             </Ul>
-            <PageImageBox height="sm:max-h-[200px]">
-              <PageImage name="epidays-detail" />
-            </PageImageBox>
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/addepiday">에피데이 작성/수정 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImageBox>
+            <PageImage name="epidays-detail" />
+          </PageImageBox>
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/addepiday">에피데이 작성/수정 페이지</PageTitle>
             <Ul>
               <Li>
                 React Hook Form의 <CodeWord>useForm</CodeWord>으로 폼 상태 및 에러 메시지 관리
@@ -203,12 +189,12 @@ export default function PagesSection() {
               <Li>태그는 입력 후 Enter로 추가하고, X 버튼으로 삭제 가능</Li>
               <Li>필수 항목 작성 시 완료 버튼 활성화</Li>
             </Ul>
-            <PageImage name="form" />
-          </ContentsBox>
-        </Article>
-        <Article>
-          <PageTitle link="/mypage">마이 페이지</PageTitle>
-          <ContentsBox>
+          </TextBox>
+          <PageImage name="form" />
+        </ContentsBox>
+        <ContentsBox>
+          <TextBox>
+            <PageTitle link="/mypage">마이 페이지</PageTitle>
             <Ul>
               <Li>프로필과 오늘의 감정, 감정 캘린더, 감정 차트, 작성한 에피데이와 댓글 표시</Li>
               <Li>
@@ -220,11 +206,11 @@ export default function PagesSection() {
                 내 에피데이/댓글은 최신 3개만 표시, &apos;더보기&apos; 클릭 시 3개씩 추가 로드
               </Li>
             </Ul>
-            <PageImageBox height="sm:max-h-[230px]">
-              <PageImage name="mypage" />
-            </PageImageBox>
-          </ContentsBox>
-        </Article>
+          </TextBox>
+          <PageImageBox>
+            <PageImage name="mypage" />
+          </PageImageBox>
+        </ContentsBox>
       </div>
     </Section>
   );

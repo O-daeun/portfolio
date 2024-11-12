@@ -1,4 +1,5 @@
 import InnerLayout from '@/components/inner-layout';
+import FunctionSection from '@/components/pages/epiday-page/function-section';
 import MethodSection from '@/components/pages/epiday-page/method-section';
 import OverviewSection from '@/components/pages/epiday-page/overview-section';
 import PagesSection from '@/components/pages/epiday-page/pages-section';
@@ -17,15 +18,16 @@ export default function EpidayPage() {
           className="mx-auto mb-[70px] mt-6 w-[200px] sm:mt-16 sm:w-[250px]"
         />
       </InnerLayout>
-      <div className="shadow-big rounded-3xl bg-white py-20">
+      <div className="rounded-3xl bg-white py-20 shadow-big">
         <InnerLayout className="flex flex-col gap-10 sm:gap-20">
           <OverviewSection />
           <MethodSection />
           <TechStackSection />
         </InnerLayout>
       </div>
-      <InnerLayout className="pt-20">
+      <InnerLayout className="flex flex-col gap-14 pt-20 sm:gap-20">
         <PagesSection />
+        <FunctionSection />
       </InnerLayout>
     </div>
   );

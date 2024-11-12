@@ -3,15 +3,16 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 interface Props {
   children: React.ReactNode;
+  className?: string;
 }
 
-export default function CodeBox({ children }: Props) {
+export default function CodeBox({ children, className }: Props) {
   return (
     <SyntaxHighlighter
       language="javascript"
       style={atomDark}
-      lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
       wrapLines={true}
+      className={`!rounded-lg text-xs ${className}`}
     >
       {children}
     </SyntaxHighlighter>
