@@ -47,6 +47,14 @@ function Li({ children }: { children: React.ReactNode }) {
   return <li className="ml-4 list-disc font-light">{children}</li>;
 }
 
+function CodeWord({ children }: { children: string }) {
+  return (
+    <span className="mr-[1px] rounded-[3px] bg-gray-500 px-[3px] py-[1px] text-sm text-white">
+      {children}
+    </span>
+  );
+}
+
 function PageImageBox({ children, height }: { children: React.ReactNode; height: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -92,12 +100,12 @@ export default function PagesSection() {
           <PageTitle link="/">랜딩 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>SEO를 위한 서버 사이드 랜더링(SSR) 구현</Li>
+              <Li>SEO 최적화를 위해 서버 사이드 렌더링(SSR) 구현</Li>
               <Li>
-                API로 최신 에피데이 데이터를 호출하는 코드
+                최신 에피데이 데이터를 서버에서 미리 API로 불러옴
                 <CodeBox>{landingCode}</CodeBox>
               </Li>
-              <Li>상단 프로필 버튼 및 &apos;시작하기&apos; 버튼 클릭 시 로그인 페이지로 이동</Li>
+              <Li>상단 프로필 버튼과 &apos;시작하기&apos; 버튼 클릭 시 로그인 페이지로 이동</Li>
             </Ul>
             <PageImageBox height="sm:max-h-[280px]">
               <PageImage name="landing" />
@@ -108,14 +116,18 @@ export default function PagesSection() {
           <PageTitle link="/login">로그인/회원가입 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>React hook form의 useForm 함수를 사용하여 form 관리 및 에러 메세지 관리</Li>
-              <Li>Next Auth의 signIn 함수 사용하여 사용자 인증 관리</Li>
               <Li>
-                사이트 둘러보기 위한 계정
+                React Hook Form의 <CodeWord>useForm</CodeWord>으로 폼 상태 및 에러 메시지 관리
+              </Li>
+              <Li>
+                NextAuth의 <CodeWord>signIn</CodeWord>을 활용한 사용자 인증 관리
+              </Li>
+              <Li>
+                사이트 둘러보기용 계정 제공:
                 <div className="mt-1 w-fit rounded-sm bg-orange-500 px-2 py-1 text-sm font-light text-white">
-                  ID : daeun@gmail.com
+                  ID: daeun@gmail.com
                   <br />
-                  PW : dhekdms123 (오다은123)
+                  PW: dhekdms123 (오다은123)
                 </div>
               </Li>
             </Ul>
@@ -129,11 +141,12 @@ export default function PagesSection() {
           <PageTitle link="/">메인 페이지</PageTitle>
           <ContentsBox>
             <Ul>
+              <Li>오늘의 에피데이가 있을 경우 표시, 없으면 미표시</Li>
+              <Li>오늘의 감정 선택 기능</Li>
               <Li>
-                오늘의 에피데이가 있을 경우 보여지고, 없을 경우 보여지지 않음 (백엔드에서 보내줌)
+                최신 에피데이와 댓글이 보여지며, &apos;더보기&apos; 클릭 시 3개씩 추가 로드,
+                새로고침 버튼으로 최신 상태 동기화
               </Li>
-              <Li>오늘의 감정을 선택할 수 있음</Li>
-              <Li>최신 에피데이와 최신 댓글이 보여지고, 더보기 버튼 클릭 시 3개씩 추가로 보여줌</Li>
             </Ul>
             <PageImageBox height="sm:max-h-[200px]">
               <PageImage name="epidays" />
@@ -144,8 +157,8 @@ export default function PagesSection() {
           <PageTitle link="/feed">피드 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>에피데이가 최신순으로 나열되고, 더보기 버튼 클릭 시 8개씩 추가로 보여줌</Li>
-              <Li>우측 새로고침 버튼 클릭 시 피드의 최신 상태를 동기화해줌</Li>
+              <Li>최신순 에피데이 나열, &apos;더보기&apos; 클릭 시 8개씩 추가 로드</Li>
+              <Li>새로고침 버튼으로 최신 상태 동기화</Li>
             </Ul>
             <PageImageBox height="sm:max-h-[200px]">
               <PageImage name="feed" />
@@ -156,27 +169,23 @@ export default function PagesSection() {
           <PageTitle link="/search">검색 페이지</PageTitle>
           <ContentsBox>
             <Ul>
+              <Li>키워드 검색 시 해당 단어가 포함된 에피데이 리스트 표시</Li>
               <Li>
-                키워드 검색 시 page param이 변경되면서 해당 단어가 내용 및 태그에 포함되어 있는
-                에피데이를 보여줌
+                검색어를 <CodeWord>localStorage</CodeWord>에 저장해 최근 검색어로 표시, &apos;모두
+                지우기&apos; 버튼으로 삭제 가능
               </Li>
-              <Li>
-                키워드가 localStorage에 기록되어 최근 검색어에 리스트로 보여주고, &apos;모두
-                지우기&apos; 버튼 클릭 시 삭제됨
-              </Li>
-              <Li>에피데이 리스트는 8개씩 무한스크롤로 보여줌</Li>
+              <Li>에피데이 리스트는 8개씩 무한 스크롤로 표시</Li>
             </Ul>
             <PageImage name="search" />
           </ContentsBox>
         </Article>
         <Article>
-          <PageTitle link="/epidays/833">에피데이 상세페이지</PageTitle>
+          <PageTitle link="/epidays/833">에피데이 상세 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>본인이 작성한 글일 경우 우측에 케밥 버튼이 있어 수정 및 삭제 가능</Li>
-              <Li>좋아요 버튼을 클릭할 수 있음</Li>
-              <Li>공유하기 버튼 클릭 시 해당 URL이 복사됨</Li>
-              <Li>하단에 댓글들이 7개씩 무한스크롤로 보여짐</Li>
+              <Li>본인 작성 글에는 수정/삭제 가능한 케밥 메뉴 표시</Li>
+              <Li>좋아요 기능 및 URL 복사 기능 제공</Li>
+              <Li>댓글은 7개씩 무한 스크롤로 표시</Li>
             </Ul>
             <PageImageBox height="sm:max-h-[200px]">
               <PageImage name="epidays-detail" />
@@ -187,16 +196,12 @@ export default function PagesSection() {
           <PageTitle link="/addepiday">에피데이 작성/수정 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>React Hook Form의 useForm 함수를 사용하여 form 관리 및 에러 메세지 관리</Li>
               <Li>
-                저자의 경우 radio input 중 &apos;직접 입력&apos;을 선택하지 않으면 하단 input이
-                보여지지 않도록 구현
+                React Hook Form의 <CodeWord>useForm</CodeWord>으로 폼 상태 및 에러 메시지 관리
               </Li>
-              <Li>
-                태그는 input에 작성한 후 Enter를 누르면 하단에 태그가 추가되고, X 버튼을 클릭하면
-                삭제되도록 구현
-              </Li>
-              <Li>필수로 작성해야 하는 내용을 작성하면 완료 버튼이 활성화되도록 구현</Li>
+              <Li>라디오 버튼 선택에 따라 input 필드 표시 여부 조정</Li>
+              <Li>태그는 입력 후 Enter로 추가하고, X 버튼으로 삭제 가능</Li>
+              <Li>필수 항목 작성 시 완료 버튼 활성화</Li>
             </Ul>
             <PageImage name="form" />
           </ContentsBox>
@@ -205,14 +210,11 @@ export default function PagesSection() {
           <PageTitle link="/mypage">마이 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>오늘의 감정 및 감정 캘린더, 감정 차트, 내가 작성한 에피데이와 댓글을 보여줌</Li>
+              <Li>오늘의 감정, 감정 캘린더, 감정 차트, 작성한 에피데이와 댓글 표시</Li>
+              <Li>감정 캘린더에는 일별 감정 이모지 기록이 표시되며, 화살표로 월 변경 가능</Li>
+              <Li>감정 차트는 선택한 월의 감정 비율을 시각화</Li>
               <Li>
-                감정 캘린더에는 매일 기록했던 감정 이모지를 보여주고, 좌우 화살표를 클릭하면
-                이전/다음 달의 감정 캘린더를 보여줌
-              </Li>
-              <Li>감정 차트는 상단 감정 캘린더가 보여주는 달의 이모지 비율을 나타냄</Li>
-              <Li>
-                내 에피데이/댓글은 최신 3개를 보여주고 더보기 버튼 클릭 시 3개씩 이어서 보여줌
+                내 에피데이/댓글은 최신 3개만 표시, &apos;더보기&apos; 클릭 시 3개씩 추가 로드
               </Li>
             </Ul>
             <PageImageBox height="sm:max-h-[230px]">
