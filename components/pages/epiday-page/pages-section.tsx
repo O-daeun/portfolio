@@ -210,7 +210,10 @@ export default function PagesSection() {
           <PageTitle link="/mypage">마이 페이지</PageTitle>
           <ContentsBox>
             <Ul>
-              <Li>오늘의 감정, 감정 캘린더, 감정 차트, 작성한 에피데이와 댓글 표시</Li>
+              <Li>프로필과 오늘의 감정, 감정 캘린더, 감정 차트, 작성한 에피데이와 댓글 표시</Li>
+              <Li>
+                &apos;프로필 편집&apos; 클릭 시 닉네임과 프로필 이미지를 수정할 수 있는 모달 창 표시
+              </Li>
               <Li>감정 캘린더에는 일별 감정 이모지 기록이 표시되며, 화살표로 월 변경 가능</Li>
               <Li>감정 차트는 선택한 월의 감정 비율을 시각화</Li>
               <Li>
