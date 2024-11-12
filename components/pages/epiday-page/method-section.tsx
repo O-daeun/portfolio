@@ -24,10 +24,10 @@ const METHOD_LIST = [
 export default function MethodSection() {
   return (
     <Section title="개발 방식">
-      <p className="mt-3 text-base font-light leading-relaxed sm:text-xl">
+      <p className="mt-3 text-base font-light sm:text-xl">
         코드잇(주)에서 제공받은 기획안, 디자인 시안, 백엔드 서버 스웨거 문서를 기반으로 프론트엔드
         개발 진행 <br />
-        <b className="font-medium">(프론트엔드 개발 기여도 100%)</b>
+        <b className="mt-1 block font-medium">(프론트엔드 개발 기여도 100%)</b>
       </p>
       <ul className="mt-8 flex gap-2">
         {METHOD_LIST.map((method, index) => (
@@ -51,7 +51,7 @@ export default function MethodSection() {
       </ul>
       <div className="mt-6 flex flex-col items-center gap-2 pb-10 sm:mt-10 sm:pb-0">
         <FaArrowDown className="mb-4 size-8 text-var-main sm:mb-6" />
-        <h3 className="text-xl">프론트엔드 개발</h3>
+        <h3 className="text-xl sm:text-2xl">프론트엔드 개발</h3>
         <div className="w-fit rounded-sm bg-orange-500 px-1 text-sm font-light text-white">
           기여도 <span className="font-medium">100%</span>
         </div>
