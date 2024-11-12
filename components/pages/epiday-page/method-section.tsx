@@ -37,7 +37,7 @@ export default function MethodSection() {
               width={350}
               height={250}
               alt={method.title}
-              className="ss:h-[200px] h-[130px] w-[350px] rounded-md object-cover object-left-top shadow-lg sm:h-[250px]"
+              className="h-[130px] w-[350px] rounded-md object-cover object-left-top shadow-lg ss:h-[200px] sm:h-[250px]"
             />
             <div className="relative mt-5 flex flex-col items-center">
               <h3 className="text-base sm:text-xl">{method.title}</h3>

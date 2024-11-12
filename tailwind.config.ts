@@ -14,6 +14,10 @@ module.exports = {
       fontFamily: {
         pretendard: ['Pretendard', 'sans-serif'],
       },
+      boxShadow: {
+        custom: '0px 3px 12px 0px rgba(0, 0, 0, 0.09)',
+        big: '0px 0px 36px 0px rgba(0, 0, 0, 0.05)',
+      },
       screens: {
         ss: '550px',
         sm: '768px',

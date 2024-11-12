@@ -8,7 +8,7 @@ function Ul({ children }: { children: React.ReactNode }) {
 function Li({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <li className="ml-4 list-disc text-lg sm:text-xl">
-      <h4 className="text-var-epiday-black font-medium">{title}</h4>
+      <h4 className="font-medium text-var-epiday-black">{title}</h4>
       <p className="mt-1 text-base sm:text-lg">{children}</p>
     </li>
   );
@@ -19,7 +19,9 @@ export default function TechStackSection() {
     <Section title="기술 스택">
       <Article title="Routing & Rendering">
         <Ul>
-          <Li title="Next.js">SSR(랜딩 페이지에 사용) 및 CSR을 혼합한 라우팅과 렌더링 최적화</Li>
+          <Li title="Next.js">
+            App Router를 사용하여 SSR와 CSR을 혼합해 페이지 렌더링과 네비게이션 최적화
+          </Li>
         </Ul>
       </Article>
       <Article title="Styling">
