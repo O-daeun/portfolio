@@ -1,7 +1,6 @@
 'use client';
 
 import BlankLink from '@/components/blank-link';
-import CodeBox from '@/components/code-box';
 import CodeWord from '@/components/code-word';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -11,11 +10,6 @@ import Section from './section';
 import SubTitle from './sub-title';
 
 const EPIDAY_URL = 'https://epiday.vercel.app';
-
-const landingCode = `export default async function EpidaysSection() {
-  const epidays = await getEpidays({ limit });
-  // ...
-}`;
 
 function PageTitle({ children, link }: { children: React.ReactNode; link: string }) {
   return (
@@ -95,7 +89,6 @@ export default function PagesSection() {
             <Ul>
               <Li>SEO 최적화를 위해 서버 사이드 렌더링(SSR) 구현</Li>
               <Li>최신 에피데이 데이터를 서버에서 미리 API로 불러옴</Li>
-              <CodeBox>{landingCode}</CodeBox>
               <Li>상단 프로필 버튼과 &apos;시작하기&apos; 버튼 클릭 시 로그인 페이지로 이동</Li>
             </Ul>
           </TextBox>

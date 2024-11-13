@@ -26,8 +26,8 @@ export default function EpidayPage() {
         </InnerLayout>
       </div>
       <InnerLayout className="flex flex-col gap-14 pt-20 sm:gap-20">
-        <PagesSection />
         <FunctionSection />
+        <PagesSection />
       </InnerLayout>
     </div>
   );
