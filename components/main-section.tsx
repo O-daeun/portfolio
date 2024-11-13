@@ -20,8 +20,12 @@ interface Props {
 
 export default function MainSection({ isMain }: Props) {
   return (
-    <main className="mx-auto h-dvh min-h-[500px] w-full min-w-fit max-w-[2000px] bg-[url('/main.jpg')] bg-cover bg-center sm:min-h-[720px]">
-      <InnerLayout className="flex h-full flex-col items-end justify-between pb-12 pt-36">
+    <main
+      className={`mx-auto min-h-[500px] w-full min-w-fit max-w-[2000px] bg-[url('/main.jpg')] bg-cover bg-center sm:min-h-[720px] ${isMain ? 'h-dvh' : 'h-dvh md:h-[794px]'}`}
+    >
+      <InnerLayout
+        className={`flex h-full flex-col items-end justify-between pb-12 ${isMain ? 'pt-36' : 'pt-28 sm:pt-32'}`}
+      >
         <h1 className="w-full text-right text-2xl font-extralight leading-normal text-white sm:text-3xl sm:leading-loose">
           {isMain ? (
             <>
@@ -32,14 +36,14 @@ export default function MainSection({ isMain }: Props) {
               </span>
             </>
           ) : (
-            <p className="leading-normal">
-              <span>코드 한 줄 한 줄에 제 열정을 담아,</span>
+            <p className="text-[21px] ss:text-2xl">
+              <span className="leading-[1.6]">코드 한 줄 한 줄에 제 열정을 담아,</span>
               <br />
-              <span>더 나은 경험을 만드는 개발자가 되겠습니다.</span>
+              <span className="leading-[1.6]">더 나은 경험을 만드는 개발자가 되겠습니다.</span>
               <br />
-              <span>함께 성장할 기회를 기대하며</span>
+              <span className="leading-[1.6]">함께 성장할 기회를 기대하며</span>
               <br />
-              <span>만나 뵙기를 바랍니다.</span>
+              <span className="leading-[1.6]">만나 뵙기를 바랍니다.</span>
             </p>
           )}
         </h1>
