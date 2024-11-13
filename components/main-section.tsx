@@ -20,7 +20,7 @@ interface Props {
 
 export default function MainSection({ isMain }: Props) {
   return (
-    <main className="mx-auto h-[794px] min-h-[500px] w-full min-w-fit max-w-[2000px] bg-[url('/main.jpg')] bg-cover bg-center sm:min-h-[720px]">
+    <main className="mx-auto h-dvh min-h-[500px] w-full min-w-fit max-w-[2000px] bg-[url('/main.jpg')] bg-cover bg-center sm:min-h-[720px]">
       <InnerLayout className="flex h-full flex-col items-end justify-between pb-12 pt-36">
         <h1 className="w-full text-right text-2xl font-extralight leading-normal text-white sm:text-3xl sm:leading-loose">
           {isMain ? (
