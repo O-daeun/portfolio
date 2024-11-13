@@ -16,6 +16,7 @@ export default function EpidayPage() {
           height={79}
           alt="epiday"
           className="mx-auto mb-[70px] mt-6 w-[200px] sm:mt-16 sm:w-[250px]"
+          priority
         />
       </InnerLayout>
       <div className="rounded-3xl bg-white py-20 shadow-big">

@@ -4,7 +4,7 @@ import ProfileLinks from './profile-links';
 
 export default function ProfileSection() {
   return (
-    <main className="ss:flex-row ss:items-end flex flex-col items-center gap-8 sm:gap-10">
+    <main className="flex flex-col items-center gap-8 ss:flex-row ss:items-end sm:gap-10">
       <div className="w-full sm:w-[300px] sm:min-w-[250px] sm:shrink-0">
         <Image
           src="/profile.jpg"
@@ -12,6 +12,7 @@ export default function ProfileSection() {
           height={665}
           alt="오다은 프로필사진"
           className="w-full rounded-sm shadow-sm"
+          priority
         />
       </div>
       <div className="flex w-full flex-col justify-between gap-6 sm:gap-10">
