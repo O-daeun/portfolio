@@ -1,4 +1,5 @@
 import InnerLayout from '@/components/inner-layout';
+import MainSection from '@/components/main-section';
 import EducationSection from '@/components/pages/resume-page/education-section';
 import ExperienceSection from '@/components/pages/resume-page/experience-section';
 import IntroduceSection from '@/components/pages/resume-page/introduce-section';
@@ -9,7 +10,7 @@ import SkillSection from '@/components/pages/resume-page/skill-section';
 export default function ResumePage() {
   return (
     <>
-      <InnerLayout className="mt-20 sm:mt-32">
+      <InnerLayout className="my-20 sm:my-32">
         <ProfileSection />
         <IntroduceSection />
         <SkillSection />
@@ -17,6 +18,7 @@ export default function ResumePage() {
         <ProjectSection />
         <EducationSection />
       </InnerLayout>
+      <MainSection />
     </>
   );
 }
