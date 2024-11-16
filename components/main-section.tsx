@@ -49,7 +49,7 @@ export default function MainSection({ isMain }: Props) {
         </h1>
         <div className="flex flex-col items-end gap-4">
           <Button href="/resume">이력서 바로가기</Button>
-          <Button href="/epiday">포트폴리오 바로가기</Button>
+          <Button href="/portfolio">포트폴리오 바로가기</Button>
         </div>
       </InnerLayout>
     </main>

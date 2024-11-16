@@ -53,7 +53,7 @@ const PROJECT_LIST = [
     period: '2023. 01 - 2023. 02',
     contributionRate: 100,
     url: 'https://hyundai-isc.com/',
-    skillList: ['JQuery', 'HTML', 'CSS'],
+    skillList: ['HTML', 'CSS', 'JQuery'],
     contentsList: [
       'Figma 기획서 및 디자인 시안을 기반으로 홈페이지 및 관리자 페이지 퍼블리싱 전담',
       '반응형 웹 구현으로 다양한 화면 크기에서 UI 요소가 깨지지 않도록 최적화',
