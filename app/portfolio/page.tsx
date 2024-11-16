@@ -68,6 +68,7 @@ function ImageBox({ name, maxHeight }: { name: string; maxHeight: string }) {
         height={1180}
         alt={`${name} PC 메인사진`}
         className={`w-[calc(100%-118px)] rounded-lg object-cover object-top shadow-custom ss:w-[calc(100%-168px)] md:w-[400px] ${maxHeight}`}
+        priority
       />
       <Image
         src={`/portfolio/${name}-mo.png`}
@@ -75,6 +76,7 @@ function ImageBox({ name, maxHeight }: { name: string; maxHeight: string }) {
         height={600}
         alt={`${name} mo 메인사진`}
         className={`w-[100px] rounded-lg object-cover object-top shadow-custom ss:w-[150px] md:w-[110px] ${maxHeight}`}
+        priority
       />
     </div>
   );
