@@ -13,7 +13,15 @@ const PROJECT_LIST = [
     url: 'https://epiday.vercel.app/',
     github: 'https://github.com/O-daeun/epiday',
     portfolio: '/epiday',
-    skillList: ['Next.js', 'React.js', 'React Query', 'Tailwind CSS', 'Zustand'],
+    skillList: [
+      'Next.js',
+      'React.js',
+      'React Query',
+      'Next Auth',
+      'React Hook Form',
+      'Tailwind CSS',
+      'Zustand',
+    ],
     contentsList: [
       '백엔드 API와 디자인 시안을 기반으로 글귀 공유 플랫폼 프론트엔드 전담 개발',
       '반응형 웹 구현으로 다양한 화면 크기에서 UI 요소가 깨지지 않도록 최적화',

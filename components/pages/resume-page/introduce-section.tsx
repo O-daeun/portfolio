@@ -5,7 +5,7 @@ export default function IntroduceSection() {
   return (
     <section className="mt-16 flex flex-col gap-6 sm:mt-20 sm:flex-row sm:gap-10">
       <SectionTitle className="w-[300px] shrink-0">INTRODUCE</SectionTitle>
-      <p className="font-light leading-[1.75]">
+      <div className="font-light leading-[1.75]">
         웹 퍼블리셔로서 쌓아온 CSS와 HTML의 탄탄한 기본기, 웹 표준에 대한 깊은 이해를 바탕으로
         프론트엔드 역량을 키워나가고 있습니다.
         <br />
@@ -37,7 +37,7 @@ export default function IntroduceSection() {
             희망 연봉: 면접 후 협의
           </div>
         </div>
-      </p>
+      </div>
     </section>
   );
 }
