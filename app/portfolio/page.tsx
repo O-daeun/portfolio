@@ -1,5 +1,6 @@
 import BlankLink from '@/components/blank-link';
 import InnerLayout from '@/components/inner-layout';
+import ProgressBar from '@/components/progress-bar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoIosArrowRoundForward } from 'react-icons/io';
@@ -121,6 +122,7 @@ function Button({
 export default function PortfolioPage() {
   return (
     <div>
+      <ProgressBar />
       <section className="bg-slate-200 py-20 sm:py-32">
         <InnerWrap>
           <div>
@@ -197,7 +199,7 @@ export default function PortfolioPage() {
               </List>
             </ListWrap>
             <div className="mt-8 flex flex-col gap-2">
-              <Button href="https://epiday.vercel.app/" name="globalNomad">
+              <Button href="https://globalnomad-ko.vercel.app" name="globalNomad">
                 홈페이지 바로가기
               </Button>
             </div>
