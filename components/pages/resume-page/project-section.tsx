@@ -7,7 +7,7 @@ import SectionTitle from './section-title';
 const PROJECT_LIST = [
   {
     title: 'Epiday',
-    subTitle: '홈페이지 프론트엔드 개발',
+    subTitle: '홈페이지 프론트엔드 개발 개인 프로젝트',
     period: '2024. 09 - 2024. 10',
     contributionRate: 100,
     url: 'https://epiday.vercel.app/',
@@ -16,12 +16,27 @@ const PROJECT_LIST = [
     skillList: ['React.js', 'Next.js', 'React Query', 'Tailwind CSS'],
     contentsList: [
       '백엔드 API와 디자인 시안을 기반으로 글귀 공유 플랫폼 프론트엔드 전담 개발',
+      '반응형 웹 구현으로 다양한 화면 크기에서 UI 요소가 깨지지 않도록 최적화',
       'SSR과 CSR의 장점을 활용한 Next.js 웹 애플리케이션 구현 (랜딩페이지에서 SSR, 나머지 페이지에서 CSR 사용)',
       'React Query로 비동기 데이터 관리 최적화 및 API 호출 효율성 강화',
       'Next Auth를 통한 사용자 인증 관리 도입으로 보안성 강화',
       'middleware로 인증되지 않은 사용자의 특정 페이지 접근 제한',
       'Zustand를 이용해 전역 상태 관리 (모달, 토스트 등)',
       '프로필 이미지 편집 기능 구현 (react-avatar-editor를 사용해 이미지 확대 및 위치 조정 가능)',
+    ],
+  },
+  {
+    title: 'Global Nomad',
+    subTitle: '홈페이지 프론트엔드 개발 팀 프로젝트',
+    period: '2024. 07',
+    contributionRate: 20,
+    url: 'https://globalnomad-ko.vercel.app/',
+    // github: 'https://github.com/part-4-team-3/global-nomad',
+    skillList: ['React.js', 'Next.js', 'React Query', 'Tailwind CSS'],
+    contentsList: [
+      '백엔드 API와 디자인 시안을 기반으로 여행·체험 예약 플랫폼 프론트엔드 개발',
+      '메인 페이지 UI 개발 및 API 연동 작업 전담',
+      '전체 페이지 UI 개선 및 반응형 웹 작업 담당',
     ],
   },
   {
