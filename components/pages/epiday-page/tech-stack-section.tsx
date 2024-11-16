@@ -24,18 +24,26 @@ export default function TechStackSection() {
           </Li>
         </Ul>
       </Article>
-      <Article title="Styling">
+      <Article title="Authentication">
         <Ul>
-          <Li title="Tailwind CSS">
-            유틸리티 기반의 CSS 프레임워크로 빠르고 효율적인 스타일링 구현
-          </Li>
-          <Li title="Heroicons">Next.js 페이지에 아이콘 추가</Li>
+          <Li title="NextAuth">사용자 인증 관리 및 보안성 강화</Li>
         </Ul>
       </Article>
       <Article title="State Management">
         <Ul>
           <Li title="React Query">API 데이터 호출 및 캐싱, 상태 관리</Li>
           <Li title="Zustand">전역 상태 관리 (모달과 토스트)</Li>
+          <Li title="React Hook Form">
+            사용자 입력 검증 및 상태 관리 (로그인, 회원가입 및 Epiday 작성 폼)
+          </Li>
+        </Ul>
+      </Article>
+      <Article title="Styling">
+        <Ul>
+          <Li title="Tailwind CSS">
+            유틸리티 기반의 CSS 프레임워크로 빠르고 효율적인 스타일링 구현
+          </Li>
+          <Li title="Heroicons">Next.js 페이지에 아이콘 추가</Li>
         </Ul>
       </Article>
       <Article title="Functional Components">

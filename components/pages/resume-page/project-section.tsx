@@ -13,7 +13,7 @@ const PROJECT_LIST = [
     url: 'https://epiday.vercel.app/',
     github: 'https://github.com/O-daeun/epiday',
     portfolio: '/epiday',
-    skillList: ['React.js', 'Next.js', 'React Query', 'Tailwind CSS'],
+    skillList: ['Next.js', 'React.js', 'React Query', 'Tailwind CSS', 'Zustand'],
     contentsList: [
       '백엔드 API와 디자인 시안을 기반으로 글귀 공유 플랫폼 프론트엔드 전담 개발',
       '반응형 웹 구현으로 다양한 화면 크기에서 UI 요소가 깨지지 않도록 최적화',
@@ -32,7 +32,7 @@ const PROJECT_LIST = [
     contributionRate: 20,
     url: 'https://globalnomad-ko.vercel.app/',
     // github: 'https://github.com/part-4-team-3/global-nomad',
-    skillList: ['React.js', 'Next.js', 'React Query', 'Tailwind CSS'],
+    skillList: ['Next.js', 'React.js', 'React Query', 'Tailwind CSS'],
     contentsList: [
       '백엔드 API와 디자인 시안을 기반으로 여행·체험 예약 플랫폼 프론트엔드 개발',
       '메인 페이지 UI 개발 및 API 연동 작업 전담',
