@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { SiCreatereactapp } from 'react-icons/si';
 import ProfileLinks from './profile-links';
 
 export default function ProfileSection() {
@@ -21,10 +20,9 @@ export default function ProfileSection() {
         </h1>
         <ProfileLinks />
         <div className="mt-2 flex w-full items-center gap-4 rounded-lg bg-gray-200/80 p-4 sm:mt-0">
-          <SiCreatereactapp className="hidden size-8 shrink-0 sm:block" />
           <p className="text-sm sm:text-base">
-            섬세한 스타일링과 컴포넌트 재사용성에 중점을 두며, <br className="hidden sm:block" />웹
-            퍼블리셔 경험을 기반으로 안정적이고 유지보수 가능한 코드를 지향합니다.
+            웹 퍼블리셔 경험을 기반으로 섬세한 스타일링과 안정적이고 유지보수 가능한 코드를
+            작성하며, 항상 새로운 기술을 배우기 위해 노력하고 있습니다.
           </p>
         </div>
       </div>

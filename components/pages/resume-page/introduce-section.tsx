@@ -28,6 +28,15 @@ export default function IntroduceSection() {
         또한, 세 번의 팀 프로젝트에서 두 차례 팀장을 맡으며 리더십을 발휘하고, 팀원으로도 참여하며
         효과적인 커뮤니케이션과 협업을 경험했습니다. 이를 통해 프로젝트 목표 달성을 위한 최적의
         방안을 모색하고 조율하는 능력을 기르게 되었습니다.
+        <br />
+        <br />
+        제가 쌓아온 경험과 역량을 귀사의 프로젝트에 기여하며, <br className="hidden sm:block" />{' '}
+        함께 성장할 수 있는 개발자가 되고 싶습니다.
+        <div className="mt-4 flex justify-end">
+          <div className="w-fit rounded-sm bg-orange-500 px-1 text-sm font-light text-white">
+            희망 연봉: 면접 후 협의
+          </div>
+        </div>
       </p>
     </section>
   );
