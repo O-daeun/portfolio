@@ -1,7 +1,6 @@
 import BlankLink from '@/components/blank-link';
 import InnerLayout from '@/components/inner-layout';
 import ProgressButtons from '@/components/pages/portfolio-page/progress-buttons';
-import ProgressBar from '@/components/progress-bar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoIosArrowRoundForward } from 'react-icons/io';
@@ -133,7 +132,6 @@ function Button({
 export default function PortfolioPage() {
   return (
     <div>
-      <ProgressBar />
       <ProgressButtons />
       <section id="Epiday" className="bg-slate-200 py-20 sm:py-32">
         <InnerWrap>
@@ -216,7 +214,7 @@ export default function PortfolioPage() {
               </Button>
             </div>
           </div>
-          <ImageBox name="global-nomad" maxHeight="max-h-[350px] ss:max-h-[490px]" />
+          <ImageBox name="global-nomad" maxHeight="max-h-[400px] ss:max-h-[490px]" />
         </InnerWrap>
       </section>
       <section id="Hyundai ISC" className="bg-[#85afee] py-20 sm:py-32">
@@ -248,7 +246,7 @@ export default function PortfolioPage() {
               </Button>
             </div>
           </div>
-          <ImageBox name="hyundai-isc" maxHeight="max-h-[350px] ss:max-h-[485px]" />
+          <ImageBox name="hyundai-isc" maxHeight="max-h-[400px] ss:max-h-[485px]" />
         </InnerWrap>
       </section>
     </div>
