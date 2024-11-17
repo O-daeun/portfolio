@@ -1,6 +1,5 @@
 'use client';
 
-import throttle from 'lodash/throttle';
 import { useEffect, useState } from 'react';
 
 type ProjectName = 'Epiday' | 'GlobalNomad' | 'Hyundai ISC';
@@ -32,12 +31,9 @@ function Button({
 
 export default function ProgressButtons() {
   const [activeButton, setActiveButton] = useState<string | null>(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-
   const projectNames: ProjectName[] = ['Epiday', 'GlobalNomad', 'Hyundai ISC'];
 
   const handleScrollToSection = (sectionId: string) => {
-    setIsScrolling(true);
     const section = document.getElementById(sectionId);
     if (section) {
       const offset = -50;
@@ -49,39 +45,39 @@ export default function ProgressButtons() {
       });
 
       setActiveButton(sectionId);
-
-      setTimeout(() => {
-        setIsScrolling(false);
-      }, 1000);
     }
   };
 
-  const updateActiveSectionOnScroll = throttle(() => {
-    if (isScrolling) return;
+  useEffect(() => {
+    const options = {
+      rootMargin: '0px 0px -40% 0px',
+      threshold: 0.5,
+    };
 
-    if (window.scrollY === 0) {
-      setActiveButton('Epiday');
-      return;
-    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveButton(entry.target.id);
+        }
+      });
+    }, options);
 
     projectNames.forEach((name) => {
       const section = document.getElementById(name);
       if (section) {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= window.innerHeight * 0.2 && rect.top < window.innerHeight * 0.6) {
-          setActiveButton(name);
-        }
+        observer.observe(section);
       }
     });
-  }, 100);
 
-  useEffect(() => {
-    updateActiveSectionOnScroll();
-    window.addEventListener('scroll', updateActiveSectionOnScroll);
     return () => {
-      window.removeEventListener('scroll', updateActiveSectionOnScroll);
+      projectNames.forEach((name) => {
+        const section = document.getElementById(name);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
     };
-  }, [updateActiveSectionOnScroll]);
+  }, [projectNames]);
 
   return (
     <div className="fixed right-4 top-1/2 flex -translate-y-1/2 flex-col items-end gap-2">
