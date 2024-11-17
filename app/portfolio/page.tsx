@@ -28,7 +28,7 @@ function Logo({ name, className }: { name: string; className: string }) {
 }
 
 function Overview({ children }: { children: React.ReactNode }) {
-  return <h3 className="mt-3 font-light sm:mt-6 sm:text-xl">{children}</h3>;
+  return <h3 className="mt-4 font-light sm:mt-6 sm:text-xl">{children}</h3>;
 }
 
 function ListWrap({ children }: { children: React.ReactNode }) {
@@ -238,7 +238,7 @@ export default function PortfolioPage() {
               </Button>
             </div>
           </div>
-          <ImageBox name="hyundai-isc" maxHeight="max-h-[350px] ss:max-h-[490px]" />
+          <ImageBox name="hyundai-isc" maxHeight="max-h-[350px] ss:max-h-[485px]" />
         </InnerWrap>
       </section>
     </div>
