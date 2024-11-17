@@ -105,7 +105,7 @@ export default function ProjectSection() {
               <ul className="mt-6 flex flex-col gap-2">
                 <li className="ml-6 list-disc">
                   <span>Skill Keywords</span>
-                  <ul className="mt-1 flex gap-1">
+                  <ul className="mt-1 flex flex-wrap gap-1">
                     {project.skillList.map((skill, index) => (
                       <li
                         key={index}
