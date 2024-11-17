@@ -1,5 +1,6 @@
 import BlankLink from '@/components/blank-link';
 import InnerLayout from '@/components/inner-layout';
+import ProgressButtons from '@/components/pages/portfolio-page/progress-buttons';
 import ProgressBar from '@/components/progress-bar';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -133,7 +134,8 @@ export default function PortfolioPage() {
   return (
     <div>
       <ProgressBar />
-      <section className="bg-slate-200 py-20 sm:py-32">
+      <ProgressButtons />
+      <section id="Epiday" className="bg-slate-200 py-20 sm:py-32">
         <InnerWrap>
           <div>
             <Logo name="epiday" className="h-auto w-[150px] sm:w-[200px]" />
@@ -181,7 +183,7 @@ export default function PortfolioPage() {
           <ImageBox name="epiday" maxHeight="max-h-[350px] ss:max-h-[590px]" isPriority />
         </InnerWrap>
       </section>
-      <section className="bg-[#a5e4d2] py-20 sm:py-32">
+      <section id="GlobalNomad" className="bg-[#a5e4d2] py-20 sm:py-32">
         <InnerWrap>
           <div>
             <Logo name="global-nomad" className="h-auto w-[230px] sm:w-[300px]" />
@@ -217,7 +219,7 @@ export default function PortfolioPage() {
           <ImageBox name="global-nomad" maxHeight="max-h-[350px] ss:max-h-[490px]" />
         </InnerWrap>
       </section>
-      <section className="bg-[#79a3e1] py-20 sm:py-32">
+      <section id="Hyundai ISC" className="bg-[#85afee] py-20 sm:py-32">
         <InnerWrap>
           <div>
             <Logo name="hyundai-isc" className="h-auto w-[150px] sm:w-[200px]" />
