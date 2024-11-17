@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 type ProjectName = 'Epiday' | 'GlobalNomad' | 'Hyundai ISC';
 
@@ -31,7 +31,7 @@ function Button({
 
 export default function ProgressButtons() {
   const [activeButton, setActiveButton] = useState<string | null>(null);
-  const projectNames: ProjectName[] = ['Epiday', 'GlobalNomad', 'Hyundai ISC'];
+  const projectNames: ProjectName[] = useMemo(() => ['Epiday', 'GlobalNomad', 'Hyundai ISC'], []);
 
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -43,8 +43,6 @@ export default function ProgressButtons() {
         top: sectionTop,
         behavior: 'smooth',
       });
-
-      setActiveButton(sectionId);
     }
   };
 
@@ -80,7 +78,7 @@ export default function ProgressButtons() {
   }, [projectNames]);
 
   return (
-    <div className="fixed right-4 top-1/2 flex -translate-y-1/2 flex-col items-end gap-2">
+    <div className="fixed right-4 top-1/2 hidden -translate-y-1/2 flex-col items-end gap-2 md:flex">
       {projectNames.map((name) => (
         <Button
           key={name}
