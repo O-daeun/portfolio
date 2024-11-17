@@ -59,7 +59,15 @@ function ListTags({ skills }: { skills: string[] }) {
   );
 }
 
-function ImageBox({ name, maxHeight }: { name: string; maxHeight: string }) {
+function ImageBox({
+  name,
+  maxHeight,
+  isPriority,
+}: {
+  name: string;
+  maxHeight: string;
+  isPriority?: boolean;
+}) {
   return (
     <div className="flex shrink-0 gap-2">
       <Image
@@ -68,7 +76,7 @@ function ImageBox({ name, maxHeight }: { name: string; maxHeight: string }) {
         height={1180}
         alt={`${name} PC 메인사진`}
         className={`w-[calc(100%-118px)] rounded-lg object-cover object-top shadow-custom ss:w-[calc(100%-168px)] md:w-[400px] ${maxHeight}`}
-        priority
+        priority={isPriority}
       />
       <Image
         src={`/portfolio/${name}-mo.png`}
@@ -76,7 +84,7 @@ function ImageBox({ name, maxHeight }: { name: string; maxHeight: string }) {
         height={600}
         alt={`${name} mo 메인사진`}
         className={`w-[100px] rounded-lg object-cover object-top shadow-custom ss:w-[150px] md:w-[110px] ${maxHeight}`}
-        priority
+        priority={isPriority}
       />
     </div>
   );
@@ -170,7 +178,7 @@ export default function PortfolioPage() {
               </Button>
             </div>
           </div>
-          <ImageBox name="epiday" maxHeight="max-h-[350px] ss:max-h-[590px]" />
+          <ImageBox name="epiday" maxHeight="max-h-[350px] ss:max-h-[590px]" isPriority />
         </InnerWrap>
       </section>
       <section className="bg-[#a5e4d2] py-20 sm:py-32">
