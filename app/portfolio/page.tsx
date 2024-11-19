@@ -153,6 +153,7 @@ export default function PortfolioPage() {
                   skills={[
                     'Next.js',
                     'React.js',
+                    'TypeScript',
                     'React Query',
                     'Next Auth',
                     'React Hook Form',
@@ -197,7 +198,9 @@ export default function PortfolioPage() {
               </List>
               <List>
                 <ListTitle>기술 스택</ListTitle>
-                <ListTags skills={['Next.js', 'React.js', 'React Query', 'Tailwind CSS']} />
+                <ListTags
+                  skills={['Next.js', 'React.js', 'TypeScript', 'React Query', 'Tailwind CSS']}
+                />
               </List>
               <List>
                 <ListTitle>기여도</ListTitle>

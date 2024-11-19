@@ -22,6 +22,7 @@ export default function TechStackSection() {
           <Li title="Next.js">
             App Router를 사용하여 SSR와 CSR을 혼합해 페이지 렌더링과 네비게이션 최적화
           </Li>
+          <Li title="TypeScript">정적 타입 시스템을 도입하여 코드의 가독성과 유지보수성 강화</Li>
         </Ul>
       </Article>
       <Article title="Authentication">
