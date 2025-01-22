@@ -6,6 +6,18 @@ import SectionTitle from './section-title';
 
 const PROJECT_LIST = [
   {
+    title: '크로마(주) 사내 그룹웨어',
+    subTitle: '프론트엔드 개발 참여',
+    period: '2024. 12 -',
+    contributionRate: 70,
+    skillList: ['Nuxt.js', 'Vue.js', 'interact.js', 'Tailwind CSS'],
+    contentsList: [
+      'Nuxt.js 기반 컴포넌트 및 UI 구현, API 연동을 통해 백엔드 데이터 시각화',
+      'interact.js 라이브러리를 활용해 일정 드래그 및 리사이즈 기능으로 직관적인 일정 조정 기능 개발',
+      '협업 도구(Notion, GitHub)를 활용한 업무 관리 및 코드 리뷰',
+    ],
+  },
+  {
     title: 'Epiday',
     subTitle: '홈페이지 프론트엔드 개발 개인 프로젝트',
     period: '2024. 09 - 2024. 10',
@@ -86,9 +98,11 @@ export default function ProjectSection() {
               <div className="mb-3 flex items-center gap-5">
                 <h3 className="text-2xl font-medium sm:text-3xl">{project.title}</h3>
                 <div className="flex items-center gap-2">
-                  <BlankLink href={project.url}>
-                    <FaExternalLinkAlt className="size-4" />
-                  </BlankLink>
+                  {project.url && (
+                    <BlankLink href={project.url}>
+                      <FaExternalLinkAlt className="size-4" />
+                    </BlankLink>
+                  )}
                   {project.github && (
                     <BlankLink href={project.github}>
                       <FaGithub className="size-[18px]" />

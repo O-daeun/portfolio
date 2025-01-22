@@ -3,6 +3,16 @@ import SectionTitle from './section-title';
 
 const EXPERIENCE_LIST = [
   {
+    title: '크로마(주) 일경험 인턴 근무',
+    subTitle: '프론트엔드 개발자',
+    period: '2024. 12 -',
+    skillList: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'GitHub', 'Notion'],
+    contentsList: [
+      '프론트엔드 개발자로서 사내 그룹웨어 프로젝트의 일정 관리 기능 개발에 참여하며 Nuxt.js 프로젝트 구조 이해',
+      '백엔드 개발자와의 협업을 통해 API 연동 및 비동기 처리 방식을 학습하며 실무 협업 능력 향상',
+    ],
+  },
+  {
     title: '코드잇 스프린트 FE 5기 수료',
     subTitle: '프론트엔드 부트캠프',
     period: '2024. 02 - 2024. 08',
@@ -15,19 +25,19 @@ const EXPERIENCE_LIST = [
       'HTML',
       'CSS',
       'Figma',
+      'GitHub',
       'Notion',
     ],
     contentsList: [
       'Notion 기획안과 Figma 디자인 시안을 기반으로 React와 Next.js로 홈페이지를 구현',
       '3번의 팀 프로젝트에 참여하며 2회 팀장과 1회 팀원 역할을 맡아 리더십과 협업 능력을 향상',
-      'Tailwind CSS와 Styled Components 같은 CSS 라이브러리를 통해 일관성 있는 UI와 유지보수성을 강화',
-      'React와 Next.js의 특성을 이해하며 프로젝트 요구에 맞는 프레임워크를 적절히 선택해 적용',
-      '발표 경험을 통해 효과적인 의사소통과 발표 능력을 강화',
+      'Tailwind CSS와 Styled Components 같은 CSS 라이브러리를 익히고 활용',
+      '발표 경험을 통해 프로젝트의 강점과 핵심포인트를 발표에 녹여내는 능력을 강화',
     ],
   },
   {
-    title: '웹 에이전시 십이지(SIBIZI) 근무',
-    subTitle: '웹 퍼블리셔',
+    title: '십이지(SIBIZI) 근무',
+    subTitle: '웹 에이전시 / 웹 퍼블리셔',
     period: '2022. 06 - 2023. 04',
     skillList: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'Figma'],
     contentsList: [

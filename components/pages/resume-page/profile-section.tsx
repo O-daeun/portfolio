@@ -21,8 +21,8 @@ export default function ProfileSection() {
         <ProfileLinks />
         <div className="mt-2 flex w-full items-center gap-4 rounded-lg bg-gray-200/80 p-4 sm:mt-0">
           <p className="text-sm sm:text-base">
-            웹 퍼블리셔 경험을 기반으로 섬세한 스타일링과 안정적이고 유지보수 가능한 코드를
-            작성하며, 항상 새로운 기술을 배우기 위해 노력하고 있습니다.
+            웹 퍼블리셔로 시작하여 웹 개발로 커리어를 이어오고 있습니다. <br />
+            개발자로서 한계를 두지 않고 계속 성장하고 싶습니다.
           </p>
         </div>
       </div>

@@ -37,13 +37,11 @@ export default function MainSection({ isMain }: Props) {
             </>
           ) : (
             <p className="text-[21px] ss:text-2xl">
-              <span className="leading-[1.6]">코드 한 줄 한 줄에 제 열정을 담아,</span>
+              <span className="leading-[1.6]">어느 한 곳에 머무르지 않고</span>
               <br />
-              <span className="leading-[1.6]">더 나은 경험을 만드는 개발자가 되겠습니다.</span>
+              <span className="leading-[1.6]">항상 배우고 성장할 준비가 되어있습니다.</span>
               <br />
-              <span className="leading-[1.6]">함께 성장할 기회를 기대하며</span>
-              <br />
-              <span className="leading-[1.6]">만나 뵙기를 바랍니다.</span>
+              <span className="leading-[1.6]">무엇이든 맡겨만 주시면 해내겠습니다.</span>
             </p>
           )}
         </h1>
