@@ -8,7 +8,7 @@ const PROJECT_LIST = [
   {
     title: '크로마(주) 사내 그룹웨어',
     subTitle: '프론트엔드 개발 참여',
-    period: '2024. 12 -',
+    period: '2024. 12 - 2025. 01',
     contributionRate: 70,
     skillList: ['Nuxt.js', 'Vue.js', 'interact.js', 'Tailwind CSS'],
     contentsList: [
