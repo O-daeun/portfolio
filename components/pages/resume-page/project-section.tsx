@@ -13,7 +13,7 @@ const PROJECT_LIST = [
     skillList: ['Nuxt.js', 'Vue.js', 'interact.js', 'Tailwind CSS'],
     contentsList: [
       '프로젝트별 개인 업무를 날짜별로 관리할 수 있는 스케줄러 프론트엔드 개발',
-      'Nuxt.js 기반으로 UI 컴포넌트 구현 및 백엔드 데이터 연동하여 시각화',
+      'Nuxt.js 기반으로 UI 컴포넌트 구현 및 목 데이터 기반 시각화',
       'interact.js 라이브러리를 활용해 일정 드래그 및 리사이즈 기능 개발로 직관적인 일정 조정 지원',
       '협업 도구(Notion, GitHub)를 활용한 업무 관리 및 코드 리뷰',
     ],

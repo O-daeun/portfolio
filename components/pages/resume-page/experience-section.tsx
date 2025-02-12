@@ -5,13 +5,13 @@ const EXPERIENCE_LIST = [
   {
     title: '크로마(주) 일경험 인턴 근무',
     subTitle: '프론트엔드 개발자',
-    period: '2024. 12 -',
-    skillList: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'GitHub', 'Notion'],
+    period: '2024. 12 - 2025. 02',
+    skillList: ['Vue.js', 'Nuxt', 'Svelte', 'Tailwind CSS', 'GitHub', 'Notion'],
     contentsList: [
       '사내 그룹웨어 프로젝트의 일정 관리 기능 개발에 참여하며 Nuxt.js 기반 프로젝트 구조와 개발 프로세스에 대한 실무 경험 습득',
       '프론트엔드 개발자로서 프로젝트별 개인 업무를 날짜별로 관리할 수 있는 스케줄러 기능 개발',
-      '백엔드 개발자와 협업하며 API 연동, 실무 협업 능력 및 문제 해결 역량 향상',
       'Notion과 GitHub을 활용해 작업 진행 상황을 공유하고 협업 효율성을 극대화',
+      '사랑의 열매 크라우드 펀딩 페이지를 템플릿화하여 섹션별 템플릿 컴포넌트를 제작, 이후 프로젝트의 작업 효율성 개선',
     ],
   },
   {

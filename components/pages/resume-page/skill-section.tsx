@@ -14,7 +14,7 @@ const SKILL_LIST = [
     ),
     list: [
       'React.js',
-      'Next.js',
+      'Next.js(14)',
       'Vue.js',
       'Nuxt.js',
       'Tailwind CSS',
