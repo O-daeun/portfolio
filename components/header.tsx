@@ -29,6 +29,7 @@ export default function Header() {
           <nav className="flex gap-4">
             <NavLink href="/resume">이력서</NavLink>
             <NavLink href="/portfolio">포트폴리오</NavLink>
+            <NavLink href="/introduce">자기소개서</NavLink>
           </nav>
         </InnerLayout>
       </div>
